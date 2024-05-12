@@ -25,5 +25,6 @@ dist-ssr
 
 # Visual Studio specific files
 .vs/
+obj/
 .vscode/
 *.vsconfig
