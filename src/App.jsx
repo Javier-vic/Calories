@@ -1,37 +1,43 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+/*import { useState } from 'react'*/
+//import reactLogo from './assets/react.svg'
+//import viteLogo from '/vite.svg'
 //import './App.css'
 import Navbar from './components/Navbar.jsx'
+import Input from './components/Input.jsx'
+import InputSelect from './components/InputSelect.jsx'
 
 function App() {
-  const [count, setCount] = useState(0)
+    const selectGender = [
+        { value: "1", label: "Hombre" },
+        { value: "0", label: "Mujer" }
+    ];
 
-  return (
-    <>
-      <Navbar/>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    const selectActivity = [
+        { value: "1.2", label: "Sedentario" },
+        { value: "1.375", label: "Ligero" },
+        { value: "1.55", label: "Intermedio" },
+        { value: "1.725", label: "Activo" },
+        { value: "1.9", label: "Muy Activo" },
+    ];
+
+    return (
+        <>
+          <Navbar/>
+            <div>
+                <div className="card">
+                    <div className="card-body">
+                        <h5 className="card-title">Calculadora</h5>
+                        <h6 className="card-subtitle mb-2 text-muted">El resultado de esta calculadora no es exacto y deberia ser utilizado com un aproximado.</h6>
+                        <InputSelect options={selectGender} selectText="Sexo" selectPlaceholder="Seleccione su sexo" />
+                        <Input inputText="Edad" inputId="inputAge" inputType="number" inputPlaceholder=""/>
+                        <Input inputText="Altura" inputId="inputAge" inputType="number" inputPlaceholder=""/>
+                        <Input inputText="Peso" inputId="inputAge" inputType="number" inputPlaceholder="" />
+                        <InputSelect options={selectActivity} selectText="Actividad" selectPlaceholder="Seleccione su nivel de actividad" />
+                    </div>
+                </div>
+            </div>
+        </>
+    )
 }
 
 export default App
