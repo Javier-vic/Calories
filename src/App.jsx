@@ -40,7 +40,7 @@ function App() {
                             <Input inputText="Altura" inputId="inputHeight" inputType="number" inputPlaceholder="" />
                             <Input inputText="Peso" inputId="inputWeight" inputType="number" inputPlaceholder="" />
                             <InputSelect options={selectActivity} selectText="Actividad" selectPlaceholder="Seleccione su nivel de actividad" selectId="selectActivity" />
-                            <button type="button" className="btn btn-primary" onClick={handleButtonClick}>Calcular</button>
+                            <button id="submitButton" type="button" className="btn btn-primary" onClick={handleButtonClick}>Calcular</button>
                         </div>
                     </div>
                     <div id="results" className="results col-4 d-none">
@@ -66,30 +66,36 @@ function App() {
 export default App
 
 function calorieCalculator() {
-    let results = document.getElementById('results');
-    results.classList.remove('d-none');
-
     let age = document.getElementById('inputAge').value;
     let height = document.getElementById('inputHeight').value;
     let weight = document.getElementById('inputWeight').value;
     let gender = document.getElementById('selectGender').value;
     let activity = document.getElementById('selectActivity').value;
+    let results = document.getElementById('results');
 
-    let calories, cutCal, bulkCal;
+    if (age.trim() !== '' && height.trim() !== '' && weight.trim() !== '' && gender !== '-1' && activity !== '-1') {      
+        results.classList.remove('d-none');
 
-    if (gender == 1) {
-        calories = 5 + (10 * weight) + (6.25 * height) - (5 * age);
+        let calories, cutCal, bulkCal;
+
+        if (gender == 1) {
+            calories = 5 + (10 * weight) + (6.25 * height) - (5 * age);
+        } else {
+            calories = (10 * weight) + (6.25 * height) - (5 * age) - 161;
+        }
+        calories *= activity;
+        cutCal = calories - 350;
+        bulkCal = calories * 1.15;
+
+        let mainCalories = document.getElementById('mainCalories');
+        let cutCalories = document.getElementById('cutCalories');
+        let bulkCalories = document.getElementById('bulkCalories');
+        mainCalories.innerText = Math.trunc(calories);
+        cutCalories.innerText = Math.trunc(cutCal);
+        bulkCalories.innerText = Math.trunc(bulkCal);
     } else {
-        calories = (10 * weight) + (6.25 * height) - (5 * age) - 161;
+        results.classList.add('d-none');
     }
-    calories *= activity;
-    cutCal = calories - 350;
-    bulkCal = calories * 1.15;
 
-    let mainCalories = document.getElementById('mainCalories');
-    let cutCalories = document.getElementById('cutCalories');
-    let bulkCalories = document.getElementById('bulkCalories');
-    mainCalories.innerText = Math.trunc(calories);
-    cutCalories.innerText = Math.trunc(cutCal);
-    bulkCalories.innerText = Math.trunc(bulkCal);
+    
 }

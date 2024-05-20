@@ -5,7 +5,7 @@ const InputSelect = ({ selectText, options, selectPlaceholder, selectId }) => {
                 <label className="input-group-text" htmlFor="inputGroupSelect01">{selectText}</label>
             </div>
             <select className="form-select" id={selectId}>
-                <option >{selectPlaceholder}</option>
+                <option value="-1">{selectPlaceholder}</option>
                 {options.map((option, index) => (
                     <option key={index} value={option.value}>{option.label}</option>
                 ))}
