@@ -1,42 +1,38 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+:root {
+    --color-1: #3DA5D9;
+    --color-2: #054A91;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+body {
+    background-color: #F9F5FF;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.content {
+    padding: 0 20vw;
+    background-color: #F9F5FF;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.calculator {
+    border: 1px solid var(--color-2);
+    border-radius: 15px;
+    overflow: hidden;
+    background-color: white;
 }
 
-.card {
-  padding: 2em;
+.calculator-title {
+    background-color: var(--color-1);
 }
 
-.read-the-docs {
-  color: #888;
+.main-calories {
+    background-color: var(--color-1);
+    height: 15vh;
+    border: 1px solid var(--color-2);
+    border-radius: 15px;
+}
+
+.secondary-calories {
+    background-color: white;
+    height: 15vh;
+    border: 1px solid var(--color-2);
+    border-radius: 15px;
 }
