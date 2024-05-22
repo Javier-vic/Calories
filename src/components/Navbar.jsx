@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 const Navbar = () => {
     return (
         <nav className="navbar navbar-expand-sm navbar-toggleable-sm fixed-nav px-5">
@@ -11,13 +13,13 @@ const Navbar = () => {
                 <div className="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                     <ul className="navbar-nav flex-grow-1 justify-content-end">
                         <li className="nav-item">
-                            <a className="nav-link mx-4" href="">Calculadora</a>
+                            <Link className="nav-link mx-4" to="/">Calculadora</Link>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link mx-4" href="">Link2</a>
+                            <Link className="nav-link mx-4" to="/funcionamiento">Como funciona</Link>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link mx-4" href="">Link3</a>
+                            <Link className="nav-link mx-4" to="/proyecto">Sobre el proyecto</Link>
                         </li>
                     </ul>
                 </div>
