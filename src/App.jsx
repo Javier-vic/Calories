@@ -1,5 +1,6 @@
 import './App.css'
 import Navbar from './components/Navbar.jsx'
+import Footer from './components/Footer.jsx'
 import Calculator from './components/Calculator.jsx'
 import Formula from './components/Formula.jsx'
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
@@ -16,7 +17,8 @@ function App() {
                         <Route exact path="/" element={<Calculator/>} />
                         <Route path="/funcionamiento" element={<Formula />} />
                     </Routes>                              
-                </div>   
+                </div>
+                <Footer/>
             </BrowserRouter>
         </>
     )
