@@ -36,3 +36,15 @@ body {
     border: 1px solid var(--color-2);
     border-radius: 15px;
 }
+
+.navbar {
+    background-color: var(--color-2);
+}
+
+.nav-link {
+    border-radius: 15px;
+}
+
+.nav-link:hover, .nav-link.active{
+    background-color: var(--color-1);
+}
