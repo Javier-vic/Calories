@@ -12,7 +12,7 @@ const Footer = () => {
                 </section>
             </div>
             <div className="text-center pb-3">
-                Desarrollado por <a href="https://www.linkedin.com/in/javier-victoriano/" className="footer-name">Javier Victoriano</a>
+                Desarrollado por <a href="https://javiervictoriano.com" className="footer-name">Javier Victoriano</a>
             </div>
         </footer>
     );
