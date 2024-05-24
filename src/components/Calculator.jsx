@@ -20,8 +20,8 @@ function Calculator() {
     };
 
     return (
-        <div className="container row py-4">
-            <div className="calculator col-8 mx-auto px-0">
+        <div className="container row py-4 mx-auto">
+            <div className="calculator col-sm-8 col-13 mx-auto px-0 mb-3">
                 <div className="calculator-title p-2 text-white">
                     <h5 className="card-title text-center">Calculadora</h5>
                     <h6 className="card-subtitle mb-2 ">El resultado de esta calculadora no es exacto y deberia ser utilizado como un aproximado.</h6>
@@ -35,7 +35,7 @@ function Calculator() {
                     <button id="submitButton" type="button" className="btn btn-primary" onClick={handleButtonClick}>Calcular</button>
                 </div>
             </div>
-            <div id="results" className="results col-4 d-none">
+            <div id="results" className="results col-sm-4 col-13 d-none">
                 <div className="main-calories mb-3 text-center p-2">
                     <h6 className="text-white ">Calor&iacute;as diarias</h6>
                     <h1 className="text-white" id="mainCalories"></h1>

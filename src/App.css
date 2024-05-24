@@ -4,7 +4,7 @@
 }
 
 .content {
-    padding: 0 20vw;
+
     margin-bottom: 100px;
 }
 
@@ -21,20 +21,24 @@
 
 .main-calories {
     background-color: var(--color-1);
-    height: 15vh;
+    height: 100px;
     border: 1px solid var(--color-2);
     border-radius: 15px;
 }
 
 .secondary-calories {
     background-color: white;
-    height: 15vh;
+    height: 100px;
     border: 1px solid var(--color-2);
     border-radius: 15px;
 }
 
 .navbar {
     background-color: var(--color-2);
+}
+
+.navbar-second-title {
+    display: none;
 }
 
 .nav-link {
@@ -63,4 +67,20 @@ footer {
 
 .text-color-1{
     color: var(--color-1);
+}
+
+@media only screen and (max-width: 992px) {
+    .content {
+        padding: 0 ;
+        margin-bottom: 100px;
+    }
+}
+
+@media only screen and (max-width: 390px) {
+    .navbar-title {
+        display: none;
+    }
+    .navbar-second-title{
+        display: block;
+    }
 }
