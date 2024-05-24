@@ -1,7 +1,7 @@
 const Footer = () => {
     return (
         <footer className="mb-0 text-center">
-            <div className="container pt-4">
+            <div className="container pt-2">
                 <section className="">                   
                     <a className="btn btn-link btn-floating btn-lg text-body m-1" href="https://www.linkedin.com/in/javier-victoriano/">
                         <i className="fab fa-linkedin"></i>
