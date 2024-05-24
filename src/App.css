@@ -3,14 +3,8 @@
     --color-2: #054A91;
 }
 
-body {
-    background-color: #F9F5FF;
-}
-
 .content {
     padding: 0 20vw;
-    background-color: #F9F5FF;
-    /*height: 100vh;*/
 }
 
 .calculator {
