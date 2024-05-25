@@ -1,7 +1,7 @@
 function Project() {
     return (
         <div className="container row py-4 mx-auto">
-            <div className="formula col-8 mx-auto p-3">
+            <div className="formula col-sm-8 col-13 mx-auto p-3">
                 <h3 className="text-color-1 text-center">Sobre la Calculadora de Calor&iacute;as</h3>
                 <p>
                     Esta SPA de una calculadora de calor&iacute;as fue desarrollada con el objetivo de practicar React.
