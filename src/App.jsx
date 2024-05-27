@@ -15,9 +15,9 @@ function App() {
                 <Navbar />
                 <div className="content">               
                     <Routes >
-                        <Route exact path="/calorias/" element={<Calculator/>} />
-                        <Route path="/calorias/funcionamiento" element={<Formula />} />
-                        <Route path="/calorias/proyecto" element={<Project />} />
+                        <Route exact path="/calories/" element={<Calculator/>} />
+                        <Route path="/calories/funcionamiento" element={<Formula />} />
+                        <Route path="/calories/proyecto" element={<Project />} />
                     </Routes>                              
                 </div>
                 <Footer/>
